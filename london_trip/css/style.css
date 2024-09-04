@@ -1,0 +1,65 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* #region Main  */
+/* 1. selezioni tramite id */
+#my-expenses {
+    background-color: black;
+    color: white;
+}
+
+#things-to-do{
+    background-color: paleturquoise;
+    color: red;
+}
+
+/* 2. seleziona tramite tag name */
+section {
+    padding: 10px;
+    margin: 5px;
+    border: 4px solid black;
+    font-size: 25px;
+/*     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ */
+}
+
+p {
+    color: fuchsia;
+}
+
+
+#info {
+    background-image: url('../img/pexels-bill-emrich-230794-0.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+
+/* #endregion Main  */
+
+
+/* #region footer */
+
+footer {
+    background-color: black;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+/* #endregion footer */
+
+
+/* 3. Seleziona tramite la classe */
+.rounded {
+    border-radius: 10px;
+}
+
+.bg-red {
+    background-color: red;
+    padding: 10px;
+}
+

@@ -1,0 +1,237 @@
+/* #region common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--tob-page-bg);
+}
+
+
+:root {
+    --tob-black: #000;
+    --tob-white: #fff;
+    --tob-light: #c9ced3;
+    --tob-page-bg: #f6f8f9;
+    --tob-primary: #47adf1;
+    --tob-editorial-badge: #45abe9;
+    --tob-goals-badge: #9c72e4;
+    --tob-recruiting-badge: #64c0a9;
+    --tob-mobile-badge: #f29e33;
+    --tob-website-badge: #d863a0;
+    --tob-sales-badge: #b0c926;
+    --tob-checkmark-color: #77c9b5;
+    --tob-cross-color: #eb5a53;
+}
+
+h3 {
+    margin-top: 2rem;
+}
+
+/* #endregion common */
+
+/* #region utilities */
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.card {
+    background-color: white;
+    margin-top: 2rem;
+    border-radius: .5rem;
+    /* border: 1px solid var(--tob-light); */
+    box-shadow: 0 0 10px var(--tob-light);
+}
+
+.card-header,
+.card-body {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.card-header {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid var(--tob-page-bg);
+}
+
+.card-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+
+.badge {
+    color: var(--tob-white);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        background-color: #ededed;
+        border-radius: .375rem;
+        padding: 5px;
+    }
+
+}
+
+/* 
+    Css nesting 
+    ul.list-unstyled li
+*/
+ul.list-unstyled {
+    list-style: none;
+
+    li {
+        line-height: 2.5rem;
+    }
+
+}
+
+
+.icon {
+    font-size: 0.8rem;
+    display: inline-block;
+    border: 1px solid gray;
+    width: 1.15rem;
+    height: 1.15rem;
+    text-align: center;
+    line-height: 1.15rem;
+    border-radius: 50%
+}
+
+.checkmark {
+    border-color: var(--tob-checkmark-color);
+    color: var(--tob-checkmark-color);
+}
+
+.cross {
+    border-color: var(--tob-cross-color);
+    color: var(--tob-cross-color);
+}
+
+
+/* Colors */
+.bg-editorial {
+    background-color: var(--tob-editorial-badge);
+}
+
+.bg-goals {
+    background-color: var(--tob-goals-badge);
+}
+
+.bg-recruiting {
+    background-color: var(--tob-recruiting-badge);
+}
+
+.bg-mobile {
+    background-color: var(--tob-mobile-badge);
+}
+
+.bg-website {
+    background-color: var(--tob-website-badge);
+}
+
+.bg-sales {
+    background-color: var(--tob-sales-badge);
+}
+
+/* Buttons */
+.btn {
+    padding: .25rem 1rem;
+    border-radius: 0.25rem;
+    border-style: none;
+    background-color: transparent;
+}
+
+.btn-primary {
+    background-color: var(--tob-primary);
+    border: 1px solid var(--tob-primary);
+    color: var(--tob-white);
+}
+
+.btn-outline {
+    border: 1px solid var(--tob-light);
+    color: var(--tob-light);
+}
+
+
+/* #endregion utilities */
+
+
+/* #region header */
+#app_header {
+    background-color: var(--tob-white);
+    padding: 10px;
+}
+
+.logo>img, .logo>span {
+    vertical-align: middle;
+}
+
+.logo>span {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+/* .logo_img{
+    vertical-align: middle;
+}
+
+.logo_text{
+    vertical-align: middle;
+    font-size: 2rem;
+    font-weight: bolder;
+} */
+
+
+/* #endregion header */
+
+
+/* #region main */
+
+main {
+    padding: 3rem 0;
+}
+
+
+section {
+    h3::before {
+        content: "👉";
+    }
+}
+
+
+/* #endregion main */
+
+/* And selector */
+h3.starred {
+    background-color: yellowgreen;
+}
+
+/* Attribute selector */
+input[type="text"]{
+    background-color: yellowgreen;
+}
+
+[data-color="red"]{
+    background-color: red;
+}
+
+div[class="starred"]  {
+    background-color: red;
+}
+
+div.starred {
+    background-color: purple;
+}

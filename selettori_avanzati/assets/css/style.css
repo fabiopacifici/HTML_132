@@ -1,0 +1,82 @@
+/* #region common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* root selector */
+:root {
+    --tob-black: #000;
+    --tob-white: #fff;
+    --tob-light: #c9ced3;
+    --tob-page-bg: #f6f8f9;
+    --tob-primary: #47adf1;
+    --tob-editorial-badge: #45abe9;
+    --tob-goals-badge: #9c72e4;
+    --tob-recruiting-badge: #64c0a9;
+    --tob-mobile-badge: #f29e33;
+    --tob-website-badge: #d863a0;
+    --tob-sales-badge: #b0c926;
+    --tob-checkmark-color: #77c9b5;
+    --tob-cross-color: #eb5a53;
+}
+
+
+/* pseudo selector hover con nesting */
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        background-color: #ededed;
+        border-radius: .375rem;
+        padding: 5px;
+    }
+
+}
+
+/* 
+    Css nesting = ul.list-unstyled li
+*/
+ul.list-unstyled {
+    list-style: none;
+
+    li {
+        line-height: 2.5rem;
+    }
+
+}
+
+
+
+/* Nesting + pseudo selector ::before  */
+section {
+    h3::before {
+        content: "👉";
+    }
+}
+
+
+/* And selector */
+h3.starred {
+    background-color: yellowgreen;
+}
+
+/* Attribute selector */
+input[type="text"]{
+    background-color: yellowgreen;
+}
+
+[data-color="red"]{
+    background-color: red;
+}
+
+div[class="starred"]  {
+    background-color: red;
+}
+
+div.starred {
+    background-color: purple;
+}
