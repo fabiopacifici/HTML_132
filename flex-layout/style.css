@@ -1,0 +1,126 @@
+/* #region common*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+img {
+    max-width: 100%;
+}
+
+
+body{
+    background-color: #ededed;
+}
+
+
+footer {
+    margin-top: 2rem;
+}
+
+nav {
+    width: 20%;
+    min-height: 440px;
+    padding: 1rem;
+
+    ul {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+    }
+
+}
+
+main {
+    width: 53%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+aside {
+    width: 25%;
+    min-height: 380px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+/* #endregion common*/
+
+
+/* #region Debug */
+.debug * {
+    border: 1px dashed;
+}
+
+.debug header {
+    height: 70px;
+    background-color: red;
+}
+
+.debug nav {
+    height: 300px;
+    background-color: blanchedalmond ;
+}
+
+.debug main {
+    height: 600px;
+    background-color: blue;
+}
+
+.debug aside {
+    height: 300px;
+    background-color: blanchedalmond ;
+}
+
+
+.debug footer {
+    height: 70px;
+    background-color: red;
+}
+
+/* #endregion debug */
+
+
+/* #region utilities  */
+
+/* Layout */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+/* Color palette  */
+
+
+/* Spacings */
+
+
+
+/* #endregion utilities */
+
+
+
+/* #region header */
+header {
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1rem 0;
+}
+
+/* #endregion header */
+
+
+/* #region main */
+
+
+/* #endregion main */
