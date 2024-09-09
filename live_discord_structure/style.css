@@ -6,6 +6,8 @@
 }
 :root {
     --dis-primary-color: blue;
+    --dis-light-color: gray;
+
 }
 
 /* debug */
@@ -64,7 +66,9 @@
 .bg-primary {
     background-color: var(--dis-primary-color);
 }
-
+.bg-light {
+    background-color: var(--dis-light-color);
+}
 /* header */
 
 #app_header {
