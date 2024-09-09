@@ -1,0 +1,48 @@
+/* Common */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* debug */
+
+.debug * {
+    border: 1px dashed;
+}
+
+.debug header {
+    background-color: red;
+
+}
+
+
+/* utities */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+
+/* header */
+
+#app_header {
+
+    padding: 1rem 0;
+    .logo, .login {
+        flex-grow:1
+    }
+    .login {
+        text-align: end;
+    }
+    .main_menu{
+        flex-grow: 2;
+        text-align: center;
+    }
+}
+
+
