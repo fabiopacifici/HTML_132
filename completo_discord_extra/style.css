@@ -1,4 +1,4 @@
-/* #region Common */
+/* Common */
 * {
     margin: 0;
     padding: 0;
@@ -25,23 +25,14 @@ img {
     max-width: 100%;
 }
 
-a {
-    text-decoration: none;
+p {
+    line-height: 1.5rem;
 }
 
-p, ul {
-    line-height: 1.75rem;
-}
+/* debug 
+Mettere nelle regole di debug solo le alezze fisse e colori di sfondo sgargianti 
+*/
 
-ul.list-unstyled {
-    list-style: none;
-}
-
-/* #endregion Common */
-
-
-/* #region debug */
-/* Mettere nelle regole di debug solo le alezze fisse e colori di sfondo sgargianti  */
 #debug * {
     border: 1px dashed;
 }
@@ -68,10 +59,7 @@ ul.list-unstyled {
     background-color: plum;
 }
 
-/* #endregion debug */
-
-
-/* #region utities */
+/* utities */
 .container {
     width: 80%;
     max-width: 1172px;
@@ -83,7 +71,6 @@ ul.list-unstyled {
     margin: auto;
 }
 
-/* Flex */
 .d-flex {
     display: flex;
 }
@@ -91,11 +78,6 @@ ul.list-unstyled {
 .justify-content-between {
     justify-content: space-between;
 }
-
-.align-items-center {
-    align-items: center;
-}
-
 
 .w-30 {
     width: 30%;
@@ -130,7 +112,7 @@ ul.list-unstyled {
 /* Makes the rule important and not overridable */
 hr.divider {
     border: none;
-    border-bottom: 1px solid #ffffff52;
+    border-bottom: 1px solid #ededed57;
 }
 
 /* Spacings */
@@ -153,183 +135,223 @@ hr.divider {
     background-color: var(--dis-dark-color);
 }
 
-
+/* Buttons */
 .btn {
-    padding: .5rem 0.75rem;
-    border-radius: 1rem;
-    border-style: none;
     display: inline-block;
-}
-.btn-lg {
-    padding: 0.75rem 1.25rem;
-    border-radius: 1.5rem;
-}
-
-.btn-light {
-    background-color: var(--dis-lighter);
+    border-style: none;
+    background-color: transparent;
+    text-decoration: none;
     color: var(--dis-dark-color);
-
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
 }
 
-.btn-dark {
-    background-color: var(--dis-dark-color);
+.btn-primary {
+    background-color: var(--dis-primary-color);
     color: var(--dis-lighter);
-
 }
 
 .btn-secondary-light {
     background-color: var(--dis-secondary-light);
     color: var(--dis-lighter);
-
 }
 
+.btn-light {
+    background-color: var(--dis-lighter);
+}
 
-.text-center {
-    text-align: center;
+.btn-dark {
+    background-color: var(--dis-dark-color);
+    color: var(--dis-lighter);
+}
+
+.text-start {
+    text-align: start;
 }
 
 .text-end {
     text-align: end;
 }
 
-.wave{
-    color: #f6f6f6;
+.text-center {
+    text-align: center;
 }
 
-.wave-top {
-    margin-bottom: -4px;
+.pb-3 {
+    padding-bottom: 1.5rem;
 }
 
-.wave-bottom {
-    margin-top: -4px;
-    rotate: 180deg;
-}
-
-/* #endregion utities */
-
-
-
-/* #region header */
-
+/* header */
 
 #app_header {
-    background-color: var(--dis-primary-color);
-    padding: 1rem 0;
+
     position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1;
-    
 
-    &>div {
+    padding: 1rem 0;
+    background-color: var(--dis-primary-color);
+    color: var(--dis-lighter);
+
+    >div {
         align-items: center;
+        flex-wrap: wrap;
     }
-
 
     .logo,
     .login {
         width: 20%;
+        min-width: 140px;
+
     }
 
     .login {
         text-align: end;
-
     }
 
     .main_menu {
         flex-grow: 1;
         text-align: center;
 
-        ul {
+        &>ul {
             list-style: none;
             display: flex;
             justify-content: space-around;
 
             a {
-                color: var(--dis-lighter);
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+    .main_menu,
+    .login {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* Main */
+
+#app_main {
+
+
+    #hero_image {
+        background-image: url('./img/jumbo.png');
+        background-size: 100%;
+        /* This adds a nice effects but causes also the image to resize */
+        background-attachment: fixed;
+        height: 440px;
+        color: var(--dis-lighter);
+        text-align: center;
+
+        & h1 {
+            font-size: 3rem;
+            margin: 3rem 0;
+        }
+
+        & p {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .call_to_action {
+            margin-top: 1rem;
+
+            a {
+                border-radius: 1.4rem;
+                padding: 0.5rem 1.5rem;
+                margin: 0.75rem;
             }
         }
 
     }
-}
 
-
-/* #region Main */
-
-#app_main {
 
     & section:not(:first-child) {
-        padding: 3.5rem 0;
-        & h2 {
-            margin: 2rem 0;
-             font-size: 2.5rem;
-         }
-     }
+        padding: 5rem 0;
+    }
 
-
-    #hero_image {
-        background-image: url('../img/jumbo.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        min-height: 440px;
-        color: var(--dis-lighter);
-
-        h1 {
-            font-size: 3rem;
-            margin: 2rem 0 3rem;
-        }
-        h1, p {
-            text-align: center;
-        }
-
-        p {
-            max-width: 650px;
-            margin: auto;
-        }
-
+    & .section_title {
+        font-size: 2.5rem;
+        margin: 2rem 0;
     }
 
 
-    #video_calls {
-        p {
-            width: 800px;
-            margin: auto;
-        }
-    }
 
 }
 
-/* #endregion Main */
 
-/* #region Footer */
+/* Footer */
 
 #app_footer {
-    
-    h2, h3 {
-        color: var(--dis-secondary);
-        margin-bottom: 1rem;
-    }
-    
-    a, .bottom, .language_picker, .socials {
-        color: var(--dis-lighter);
+
+
+
+    & h3 {
+        font-size: 1.6rem;
     }
 
-    .language_picker {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
+    & h3,
+    & h4 {
+        color: var(--dis-secondary);
+        margin-bottom: 1.25rem;
     }
-    
-    .socials {
-        i {
-            padding: 0.25rem;
-        }
-    }
+
+
 
     .bottom {
         padding: 1rem 0;
+    }
+
+
+    ul {
+        list-style: none;
+        line-height: 1.4rem;
+
+        a {
+            text-decoration: none;
+            color: var(--dis-lighter);
+        }
+    }
+
+}
+
+
+/* Extra */
+
+
+#login {
+    border: 1px solid gray;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(122, 122, 122, 0.699);
+    text-align: left;
+
+    &::backdrop {
+        backdrop-filter: blur(5px);
+    }
+
+    label {
+        display: block;
+        text-align: start;
+        margin: 2rem 0 1rem;
+        font-weight: bold;
+    }
+
+    >div {
+        margin-bottom: 1rem;
+        input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid var(--dis-secondary-light);
+
+        }
 
     }
+
+
+
 }
